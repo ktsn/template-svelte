@@ -25,12 +25,14 @@
   "scripts": {
     "build": "bili --format cjs,es,umd,umd-min",
     "lint": "eslint --ext html src test",
-    "test": "bili && jest",
-    "test:watch": "run-p watch:*",
-    "watch:jest": "jest --watch",
-    "watch:build": "bili --watch"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "jest": {
+    "transform": {
+      "\\.js$": "babel-jest",
+      "\\.html$": "svelte-jest"
+    },
     "testRegex": "/test/.+\\.spec\\.js$"
   },
   "devDependencies": {
@@ -46,6 +48,7 @@
     "npm-run-all": "^4.1.2",
     "prettier": "1.11.1",
     "rollup-plugin-svelte": "^4.0.0",
-    "svelte": "^1.58.0"
+    "svelte": "^1.58.0",
+    "svelte-jest": "^0.1.0"
   }
 }

@@ -1,9 +1,9 @@
-import Component from '../'
+import Component from '../src/Component.html'
 
 describe('Component', () => {
-  it('should have object', () => {
-    expect(() => {
-      new Component({})
-    }).not.toThrow()
+  it('should render', () => {
+    const el = document.createElement('div')
+    new Component({ target: el })
+    expect(el.textContent).toBe('Hello World!')
   })
 })

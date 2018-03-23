@@ -1,13 +1,17 @@
-<h1>Hello World!</h1>
+<h1>Hello {{ message }}!</h1>
+
+<script>
+  export default {
+    data() {
+      return {
+        message: 'World'
+      }
+    }
+  }
+</script>
 
 <style>
   h1 {
     color: red;
   }
 </style>
-
-<script>
-  export default {
-
-  }
-</script>
