@@ -23,6 +23,7 @@
     "url": "https://github.com/ktsn/template-svelte.git"
   },
   "scripts": {
+    "prepublishOnly": "npm run lint && npm run test && npm run build",
     "build": "bili --format cjs,es,umd,umd-min",
     "lint": "eslint --ext html src test",
     "test": "jest",
